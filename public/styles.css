@@ -8,6 +8,7 @@
 }
 :root {
   --main-bg-color: #7159c1;
+  --link-bg-color: #777;
 }
 
 
@@ -22,6 +23,7 @@ header {
   width: 100%;
   padding: 32px;
   text-align: center;
+  box-sizing: border-box;
 
 }
 
@@ -29,7 +31,40 @@ header {
   font-size: 22px;
 
 }
-.links a {
+
+.links a + a {
   margin-left: 32px;
+
+}
+.links a {
+  position: relative;
   text-decoration: none;
+  color: var(--link-bg-color)
+}
+
+.links a.active {
+  font-weight: bold;
+  color: var(--main-bg-color);
+}
+
+.links a:hover {
+  color: var(--main-bg-color);
+}
+
+.links a::after { 
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--main-bg-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+
+
+.links a:hover::after { 
+  width: 100%;
+  transition: width 200ms ease-in-out;
+  
 }
