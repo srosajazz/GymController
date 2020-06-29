@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js global dir --json
+
+PATH: 
+  /Users/sergiorosa/.zinit/polaris/sbin:/Users/sergiorosa/.zinit/polaris/bin:/Users/sergiorosa/.zinit/polaris/usr/sbin:/Users/sergiorosa/.zinit/polaris/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/sergiorosa/Android/Sdk/tools:/Users/sergiorosa/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.4.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/sergiorosa/Documents/Skylab/GymController/package.json: Unexpected token } in JSON at position 176
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "GymController",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "nodemon",
+      "nodemon": "nodemon server.js",
+     
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "browser-sync": "^2.26.7",
+      "express": "^4.17.1",
+      "method-override": "^3.0.0",
+      "nodemon": "^2.0.4",
+      "nunjucks": "^3.2.1",
+      "pg": "^8.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
